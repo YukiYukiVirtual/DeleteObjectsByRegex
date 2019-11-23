@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEditor;
@@ -9,10 +8,10 @@ using UnityEngine;
 public class DeleteObjectsByRegex : EditorWindow
 {
 	private static GameObject parentObject;
-	private static string pattern;
+	private static string pattern = "";
 	
 	// ヒエラルキーのオブジェクト右クリックで使えるやつ
-	[MenuItem ("GameObject/Delete Objects By Regex", false, 21)]
+	[MenuItem ("GameObject/Delete Objects By Regex", false, 20)]
 	public static void ShowWindow () {
 		parentObject = Selection.activeGameObject;
 		EditorWindow.GetWindow (typeof (DeleteObjectsByRegex));
